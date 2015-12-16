@@ -1,0 +1,38 @@
+table.centered.highlight.complTrainTab.hide
+	thead
+		tr
+			td Номер
+			td З
+			td До
+			td Відправлення
+			td Прибуття
+			td Дата
+			td Вілних місць
+			td Вибір
+	tbody
+		each train, i in currentRes
+			tr
+				td= train.number
+				td= train.station_from_name
+				td= train.station_to_name
+				td= train.time_from
+				td= train.time_to
+				td= train.date
+				td= train.places_num
+				td
+					p
+						input(type="radio" name="checkedTrain" id="checkedTrain"+i value=i+1)
+						label(for="checkedTrain"+i) Обрати
+table.centered.complTrainTab.hide
+	tr
+		td: button(id="select" class="waves-effect waves-light btn") Обрати
+		td: button(id="buy" class="waves-effect waves-light btn disabled") Придбати
+		td: p.price.hide Вартіcть, грн. 
+				b(id="forPrice")
+
+div.card.blue-grey.darken-1.uuid.hide
+	div.card-content.white-text
+		span(id="forUuid").card-title
+		p Унікальний код Вашого квитка. Збережіть його, щоб не загубити. Він знадобиться, якщо Ви захочете повернути квиток.
+	div.card-action
+		a(href="#" id='uuidCardBtn') ОК

@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+	head
+		title= Головна
+		meta(charset='utf-8')
+		
+		link(href="../public/css/materialize.css" rel="stylesheet")
+		link(href="../public/css/style.css" rel="stylesheet")
+
+		script(src="../public/js/jquery-2.1.4.js")
+		script(src="../public/js/materialize.js")
+		script(src="../public/js/bootstrap.js")
+		script(src="../public/js/functions.js")
+
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+	body
+		header
+			nav
+				div.nav-wrapper
+					a(href="#" class="brand-logo center") Залізничні квитки онлайн
+		main
+			.container
+				h1 Ласкаво просимо
+				p Пропонуємо придбати або повернути залізничні квітки
+					form.form-horizontal
+						.form-group
+							label(for="inputName")
+								|ПІБ
+							input(type="text" class="form-control" id="inputName" placeholder="Зражевська Ганна Сергіївна" name="nameUser")
+						.form-group
+							label(for="inputFrom") 
+								|Від
+							input(type="text" class="form-control" id="inputFrom" placeholder="Населений пункт" name="from")
+						.form-group
+							label(for="inputTo") Куди
+							input(type="text" class="form-control" id="inputTo" placeholder="Населений пункт" name="to")
+						.form-group
+							label(for="inputDate") Дата
+							input(type="date"  class="datepicker" id="inputDate" name="date" placeholder="14 грудень, 2015")
+							//-input(type="date" class="form-control" id="inputDate" name="date")
+						.form-group
+							p
+								input(type="radio" name="checkedType" id="checkedType1" value="Плацкарт" checked)
+								label(for="checkedType1") Плацкарт
+							p
+								input(type="radio" name="checkedType" id="checkedType2" value="Купе")
+								label(for="checkedType2") Купе
+							p
+								input(type="radio" name="checkedType" id="checkedType3" value="Люкс")
+								label(for="checkedType3") Люкс
+
+				.form-group.center-align
+					button(id="find" class="waves-effect waves-light btn") Знайти квиток
+							button(id="return" class="waves-effect blue waves-light btn") Повернути квиток
+				
+					
+								
+
+					
+				//- Modal Structure
+				div(id="modalProgress" class="modal")
+					div(class="modal-content")
+						div(class="progress" id="progress")
+							div(class="indeterminate")
+					
+				div(id="modalMain" class="modal")
+					div(class="modal-content" id="modalForInsert")
+
+		footer.page-footer
+			div.container
+				div.row
+					div.col.l6.s12
+						h5.white-text Залізничні квитки
+						p.grey-text.text-lighten-4 На цьому сайті ви маєте можливість придбати або повернути залізничний квиток.
+			div.footer-copyright
+				div.container
+					|© 2015 Зражевська Ганна Сергіївна, ІС-33, 3 курс, ОБДЗ Курсовий проект
+

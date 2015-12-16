@@ -1,0 +1,14 @@
+div.returnTicketForma
+	div.input-field
+		input(id="uuidcode" type="text" name="uuid")
+		label(for="uuidcode") UUID
+	div.input-field
+		button(id="searchUUID" class="waves-effect waves-light btn") Повернути
+
+div.card.blue-grey.darken-1.returnuuid.hide
+	div.card-content.white-text
+		span.card-title Ви успішно повернули Ваш квиток.
+		p Повернена сума, грн. 
+			b(id="forReturnPrice")
+	div.card-action
+		a(href="#" id='uuidCardBtn') ОК
